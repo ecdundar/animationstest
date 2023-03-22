@@ -32,14 +32,21 @@ class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
             ),
             duration: const Duration(seconds: 1),
             curve: Curves.fastOutSlowIn,
+            child: const Center(
+                child: Text('Burulaş', style: TextStyle(color: Colors.white))),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
               final random = Random();
-              _width = random.nextInt(300).toDouble();
-              _height = random.nextInt(300).toDouble();
+              do {
+                _width = random.nextInt(300).toDouble();
+              } while (_width < 100);
+              do {
+                _height = random.nextInt(300).toDouble();
+              } while (_height < 50);
+
               _color = Color.fromRGBO(
                 random.nextInt(256),
                 random.nextInt(256),
