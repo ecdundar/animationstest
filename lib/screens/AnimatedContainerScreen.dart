@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 
 class AnimatedContainerScreen extends StatefulWidget {
@@ -55,6 +55,9 @@ class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
               );
               _borderRadius =
                   BorderRadius.circular(random.nextInt(100).toDouble());
+
+              HapticFeedback.mediumImpact();
+              SystemSound.play(SystemSoundType.click);
             });
           },
           child: const Icon(Icons.play_arrow),
