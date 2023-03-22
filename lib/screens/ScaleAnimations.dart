@@ -27,12 +27,14 @@ class _ScaleAnimationsState extends State<ScaleAnimations>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey,
-      child: Center(
-        child: _scaleAnimationButton(),
-      ),
-    );
+    return Scaffold(
+        appBar: AppBar(title: Text('Scale Animations')),
+        body: Container(
+          color: Colors.white,
+          child: Center(
+            child: _scaleAnimationButton(),
+          ),
+        ));
   }
 
   _scaleAnimationButton() {
@@ -55,9 +57,9 @@ class _ScaleAnimationsState extends State<ScaleAnimations>
     var animation = AnimationController(
       vsync: this,
       lowerBound: 1.0,
-      upperBound: 2.0,
+      upperBound: 3.0,
       debugLabel: "animations demo",
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 10),
     );
 
     animation.addListener(() {
