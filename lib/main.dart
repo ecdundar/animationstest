@@ -1,3 +1,4 @@
+import 'package:animationtest/screens/AnimatedOpacityScreen.dart';
 import 'package:animationtest/screens/ComposedAnimations.dart';
 import 'package:animationtest/screens/RotationAnimations.dart';
 import 'package:animationtest/screens/ScaleAnimations.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         //home: RotationAnimations(),
         //home: ScaleAnimations());
         //home: TranslateAnimations());
-        home: ComposedAnimations());
+        //home: ComposedAnimations());
+        home: const AnimatedOpactiyScreen());
   }
 }
