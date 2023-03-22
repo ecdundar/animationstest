@@ -20,8 +20,8 @@ class _RotationAnimationsState extends State<RotationAnimations>
   void initState() {
     super.initState();
 
-    // _animation = createBounceInRotationAnimation();
-    _animation = createRotationAnimation();
+    //_animation = createBounceInRotationAnimation();
+    _animation = createRotationAnimation(); //Nesneyi saat yönünde döndür.
     _animation.forward();
   }
 
@@ -45,7 +45,7 @@ class _RotationAnimationsState extends State<RotationAnimations>
 
   _rotationAnimationButton() {
     return Transform.rotate(
-      angle: _angle,
+      angle: _angle, //(-math.pi / 12.0) * 6,
       child: ElevatedButton(
         child: const Text("Rotated button"),
         onPressed: () {
@@ -68,6 +68,7 @@ class _RotationAnimationsState extends State<RotationAnimations>
     animation.addListener(() {
       setState(() {
         _angle = (animation.value * 360.0) * _toRadians;
+        print(_angle);
       });
     });
 
