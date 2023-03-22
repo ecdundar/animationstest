@@ -19,7 +19,7 @@ class _AnimatedOpactiyScreenState extends State<AnimatedOpactiyScreen> {
         child: Center(
           child: AnimatedOpacity(
               opacity: _visible ? 1.0 : 0.0,
-              duration: const Duration(milliseconds: 500),
+              duration: const Duration(milliseconds: 1000),
               child: Container(
                 width: 200,
                 height: 200,
@@ -33,7 +33,7 @@ class _AnimatedOpactiyScreenState extends State<AnimatedOpactiyScreen> {
             _visible = !_visible;
           });
         },
-        child: const Icon(Icons.search),
+        child: const Icon(Icons.visibility),
       ),
     );
   }
