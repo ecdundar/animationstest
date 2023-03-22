@@ -33,11 +33,13 @@ class _RotationAnimationsState extends State<RotationAnimations>
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey,
-      child: Center(
-        child: _rotationAnimationButton(),
-      ),
+    return Scaffold(
+      appBar: AppBar(title: const Text('Animations Test')),
+      body: Container(
+          color: Colors.white,
+          child: Center(
+            child: _rotationAnimationButton(),
+          )),
     );
   }
 
