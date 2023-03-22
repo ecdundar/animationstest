@@ -8,6 +8,8 @@ class AnimatedOpactiyScreen extends StatefulWidget {
 }
 
 class _AnimatedOpactiyScreenState extends State<AnimatedOpactiyScreen> {
+  bool _visible = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,12 +17,23 @@ class _AnimatedOpactiyScreenState extends State<AnimatedOpactiyScreen> {
       body: Container(
         color: Colors.white,
         child: Center(
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.blue,
-          ),
+          child: AnimatedOpacity(
+              opacity: _visible ? 1.0 : 0.0,
+              duration: const Duration(milliseconds: 500),
+              child: Container(
+                width: 200,
+                height: 200,
+                color: Colors.blue,
+              )),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            _visible = !_visible;
+          });
+        },
+        child: const Icon(Icons.search),
       ),
     );
   }
