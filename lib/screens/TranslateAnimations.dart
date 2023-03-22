@@ -60,7 +60,7 @@ class _TranslateAnimationsState extends State<TranslateAnimations>
 
     var animation = controller.drive(Tween<Offset>(
       begin: Offset.zero,
-      end: Offset(70, 200),
+      end: Offset(70, -200),
     ));
 
     animation.addListener(() {
