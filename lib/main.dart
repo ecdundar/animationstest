@@ -1,5 +1,6 @@
 import 'package:animationtest/screens/RotationAnimations.dart';
 import 'package:animationtest/screens/ScaleAnimations.dart';
+import 'package:animationtest/screens/TranslateAnimations.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         //home: RotationAnimations(),
-        home: ScaleAnimations());
+        //home: ScaleAnimations());
+        home: TranslateAnimations());
   }
 }
